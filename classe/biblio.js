@@ -66,5 +66,7 @@ const b1 = new Bibliotheque("Ma Bibliothèques");
 
 // ajout
 b1.ajouterLivre(l1);
-console.log(b1.rechercherLivre(l1.getTitre()));
+b1.ajouterLivre(l2);
+b1.ajouterLivre(l3);
+console.log(b1.rechercherLivre(l3.getTitre()));
 b1.afficherBib();
