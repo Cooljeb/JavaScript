@@ -38,16 +38,17 @@ class Bibliotheque {
   }
 
   rechercherLivre(nomDuLivre) {
-    const livreTrouve = this.tablivres.find(
-      (livre) => livre.getTitre() === nomDuLivre
-    );
+    //const livreTrouve = this.tablivres.find(
+    //   (livre) => livre.getTitre() === nomDuLivre
+    // );
 
-    if (livreTrouve) {
-      return livreTrouve;
-    } else {
-      console.error("Livre inconnu");
-      return null;
-    }
+    // if (livreTrouve) {
+    //   return livreTrouve;
+    // } else {
+    //   console.error("Livre inconnu");
+    //   return null;
+    // }
+    return this.livres.filter((livre) => livre.titre === titre);
   }
 
   afficherBib() {

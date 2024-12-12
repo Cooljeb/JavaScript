@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const spanX = document.getElementById("x");
+      const spanY = document.getElementById("y");
+
+      const canvaPage = document.getElementById("canvas");
+      const ctx = canvaPage.getContext("2d");
+      let isDrawing = false;
+      // On récupère le décalage du canevas en x et y par rapport aux bords
+      // de la page
+      const rect = myPics.getBoundingClientRect();
+
+      ctx.beginPath();
+      ctx.moveTo(250, 100);
+      ctx.lineTo(event.offsetX, event.offsetY);
+
+      // ajouts des événements
+
+      document.addEventListener("mousemove", (event) => {
+        spanX.textContent = event.clientX;
+        spanY.textContent = event.clientY;
+        //console.log(event);
+      });
+      document.addEventListener("mouseup", (event) => {
+        //console.log(event);
+      });
+      document.addEventListener("mousedown", (event) => {
+        //console.log(event);
+      });
+      document.addEventListener("mouseleave", (event) => {
+        //console.log(event);
+      });
+      document.addEventListener("mouseenter", (event) => {
+        //console.log(event);
+      });
+    </script>
+  </head>
+  <body>
+    <p>Position de la souris : <span id="x">0</span>,<span id="y">0</span></p>
+
+    <canvas
+      id="canvas"
+      width="500"
+      height="500"
+      style="border: 1px solid black"
+    ></canvas>
+  </body>
+</html>

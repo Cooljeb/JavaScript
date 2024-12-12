@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <!-- Création des boutons-->
+  <button onclick="clickButtonAJouter()">Ajouter</button>
+  <button onclick="clickButtonReinit()">Réinitialiser</button>
+  <div class="cpt">0</div>
+  <!--Ajouts de la dépendances à jquery-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!--Script JS-->
+  <script>
+    const clickButtonAJouter = () => {
+      let compteur = parseInt($("div.cpt").text(), 10);
+      console.log(compteur);
+      compteur++;
+      console.log(compteur);
+      $("div.cpt").text(compteur);
+    };
+
+    const clickButtonReinit = () => {
+      return $("div.cpt").text(0);
+    };
+  </script>
+</html>

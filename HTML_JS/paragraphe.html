@@ -1,0 +1,44 @@
+<!-- 
+
+ Exercice 6 : Afficher/Masquer un élément
+ 
+ Créez un bouton "Afficher/Masquer".
+ Quand on clique sur ce bouton, un paragraphe est
+ soit affiché, soit masqué (en alternance).
+
+Changez également le texte du bouton pour
+refléter l’état actuel ("Afficher" ou "Masquer").
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti eligendi
+    reiciendis cum rem fugiat, sequi minus a voluptatibus earum quam, facere
+    pariatur odio at, dolor expedita et unde! Cupiditate, placeat.
+  </p>
+  <button class="btn" onclick="showHideText()">Cacher</button>
+  <!--Ajouts de la dépendances à jquery-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!--Script JS-->
+  <script>
+    $(document).ready(() => {
+      $(".btn").click(() => {
+        if ($(".btn").html() === "Cacher") {
+          $("p").hide();
+          $(".btn").html("Afficher");
+        } else {
+          $("p").show();
+          $(".btn").html("Cacher");
+        }
+      });
+    });
+  </script>
+</html>
